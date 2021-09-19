@@ -3,6 +3,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from nltk.corpus import stopwords
+import nltk
 
 nltk.download('stopwords')
 
@@ -27,4 +28,4 @@ def my_form_post():
     return render_template('form.html', final=compound, text1=text1)
 
 if __name__ == "__main__":
-    app.run(debug=True, host="127.0.0.1", port=5002, threaded=True)
+    app.run(debug=True, threaded=True)
